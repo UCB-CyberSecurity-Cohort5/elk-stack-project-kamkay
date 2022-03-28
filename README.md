@@ -32,7 +32,7 @@ The advantage of a jump box is that it is a secure computer that only allows spe
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 - Filebeat watches and monitors log files. It can also monitor locations users may be accessing the servers, as well as collect additional logging details. It is made as a lightweight shipper for forwarding and centralizing the collected log data. The collected log data is forwarded to either Elasticsearch or Logstash for indexing. 
-***[Filebeat Overview](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html)
+... [Filebeat Overview](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html)
  
 - Metricbeat takes the metrics and statistics that it collects and ships it to the chosen output, typically Elasticsearch or Logstash. Metricbeat is able to help users moitor their servers by collecting metrics from the system and any services that may be running the server. 
 ***[Metricbeat Overview](https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-overview.html)
@@ -104,11 +104,11 @@ In order to use the Filebeat and Metricbeat playbooks, you will need to have an 
 
 SSH into the control node and follow the steps below:
 - Copy the Filebeat and metricbeat configuration and playbook files to the /etc/ansible file.
-*** - [Filebeat Configuration file](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/ConfigFiles/filebeat-config.yml)
-*** - [Metricbeat Configuration file](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/ConfigFiles/metricbeat-config.yml)
-*** - [Filebeat-install playbook](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/filebeat-playbook.yml)
-*** - [Metricbeat-install playbook](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/metricbeat-playbook.yml)
+*** [Filebeat Configuration file](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/ConfigFiles/filebeat-config.yml)
+*** [Metricbeat Configuration file](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/ConfigFiles/metricbeat-config.yml)
+*** [Filebeat-install playbook](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/filebeat-playbook.yml)
+*** [Metricbeat-install playbook](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/metricbeat-playbook.yml)
 - Update the hosts file to include the Webserver and ELK groups 
-*** - [Hosts file](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/hosts)
+*** [Hosts file](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/hosts)
 - Run the playbooks, and navigate to Kibana homepage to check that the installation worked as expected.
-*** - http://[ELKserver IP]/app/kibana#/home 
+*** http://[ELKserver IP]/app/kibana#/home 
