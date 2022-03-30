@@ -48,47 +48,47 @@
 3. Now that you have a feel for the data, Let's dive a bit deeper. Look at the chart that shows Unique Visitors Vs. Average Bytes.
      - Locate the time frame in the last 7 days with the most amount of bytes (activity).
          - The located time frame that shows to have used the most amount of bytes is 12:00 to 15:00
-           ![alt text]
+           ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/11.png)
+           ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/12.png)
      - In your own words, is there anything that seems potentially strange about this activity?
-         - From the screenshot above, we can gather that one unique user was able to generate enough activity that approximately 8,780 bytes of memory were used. For one user to generate that much activity is definitely suspicious if it was not a scheduled maintenance update or site update.  
+         - From the screenshot above, we can gather that one unique user was able to generate enough activity that approximately 16,750 bytes of memory were used. For one user to generate that much activity is definitely suspicious if it was not a scheduled maintenance update or site update.  
 
 4. Filter the data by this event.
      - What is the timestamp for this event?
        - 14:58:15
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/13.png)
      - What kind of file was downloaded?
        - The file type is gz
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/14.png)
      - From what country did this activity originate?
        - China
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/15.png)
      - What HTTP response codes were encountered by this visitor?
        - 200 success
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/16.png)
 
 5. Switch to the Kibana Discover page to see more details about this activity.
-       ![alt text](
+       ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/21.png)
      - What is the source IP address of this activity?
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/17.png)
      - What are the geo coordinates of this activity?
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/18.png)
      - What OS was the source machine running?
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/19.png)
      - What is the full URL that was accessed?
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/20.png)
      - From what website did the visitor's traffic originate?
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/22.png)
 
 6. Finish your investigation with a short overview of your insights. 
 
      - What do you think the user was doing?
-       - user was trying to download a gz file onto the web server. Specifically, a linux system gz file.  
+       - The User was trying to download a gz file onto the web server. Specifically, a linux package gz file.  
      - Was the file they downloaded malicious? If not, what is the file used for?
-       - The file itself may not be malicious, at this moment we cannot determine the contents of the file. It can be a system administrator installing new packages or updates. 
+       - The file itself may not be malicious, at this moment we cannot determine the contents of the file. It can be a system administrator installing new packages or updates on the web server. 
      - Is there anything that seems suspicious about this activity?
        - Not necessarily, it depends on what the contents of the file. Since that can not be determined, it is recommended to increase monitoring on specific user.   
      - Is any of the traffic you inspected potentially outside of compliance guidelines?
-       - None of the inspected traffic is necessarily outside of compliance guidelines as it is a user downloading a file. However, further inquiry into this event and user should be conducted to fully determine the activity of the user. 
+       - None of the inspected traffic is outside of compliance guidelines as it is a user downloading a file onto the server. However, further inquiry into this event and user should be conducted to fully determine the activity of the user. 
 
----
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
+--- 
