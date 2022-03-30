@@ -36,14 +36,14 @@
          ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/07.uniquebycountry.png)
     - Of the traffic that's coming from that country, what time of day had the highest amount of activity?
        - Hour 13
-         ![alt text]()
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/08.hour13.png)
     - List all the types of downloaded files that have been identified for the last 7 days, along with a short description of each file type (use Google if you aren't sure about a particular file type).
        - gz: file format and software application used for file compression and decompression. This file format is primarily used on Unix operating systems. [Reference](https://fileinfo.com/extension/gz)
        - zip: archive file format that supports lossless data compression. Can also contain more than one file or directory which is compressed into a single zipped file. This allows for easy download, and transportation of the file. [Reference](https://www.google.com/search?client=firefox-b-1-d&sxsrf=APq-WBtytD_DfMoJEyNpHHucJlqscNDqAg:1648595723928&q=ZIP+(file+format)&si=ANhW_NoCZx1_PD6GdONlC84cm3ga5T0mFwVILPoTDjPpD15GkmRsX8JQmsP479ylWBlGSfnLEGb5ZbMwR2RXqaO43EFrham3yEBszjLZwxSuseDTAcVQFSyiFKu9Mz5Jqv2u_a8YuJKVDY39GKFXGR42Filznq_Mk2TP0ZSg9s4pOC7cmZL5IzStAx5qCWgvjHv-W3ZMWsxv&sa=X&ved=2ahUKEwjy14LUuez2AhUMKUQIHQTqBccQ6RN6BAgYEAE&biw=798&bih=719&dpr=2)
        - css: Cascading style sheet file used to format the contents of a webpage. Contains customized global properties for displaying HTML elements. [Reference](https://fileinfo.com/extension/css)
        - deb: Debian Linux distribution, a software package primarily used to install and/or update Unix applications. [Reference](https://fileinfo.com/extension/deb)
        - rpm: Red Hat package manager file that's used to store installation packages on Linux operating systems. This type of file makes it easy to distribute, install, upgrade and even remove packages. [Reference](https://www.lifewire.com/rpm-file-2622217)
-         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/9.logdatafolder.png)
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/09.logdatafolder.png)
 
 3. Now that you have a feel for the data, Let's dive a bit deeper. Look at the chart that shows Unique Visitors Vs. Average Bytes.
      - Locate the time frame in the last 7 days with the most amount of bytes (activity).
