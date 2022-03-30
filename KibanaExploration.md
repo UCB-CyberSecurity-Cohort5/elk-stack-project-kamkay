@@ -67,21 +67,22 @@
          ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/14.HTTPresponsecode.png)
 
 5. Switch to the Kibana Discover page to see more details about this activity.
+       ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/14.2.discoverpage.png)
      - What is the source IP address of this activity?
-       - 
-         - 
+       - 132.186.182.124
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/15.clientip.png)
      - What are the geo coordinates of this activity?
        - 
-         - 
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/16.geocoordinates.png)
      - What OS was the source machine running?
        - 
-         - 
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/17.OSsourcemachine.png)
      - What is the full URL that was accessed?
        - https://elastic-elastic-elastic.org/people/type:astronauts/name:william-s-mcarthur/profile
-         - 
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/18.linkaccessed.png)
      - From what website did the visitor's traffic originate?
        - http://www.elastic-elastic-elastic.com/success/daniel-brandenstein
-         - 
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/19.referersite.png)
 
 6. Finish your investigation with a short overview of your insights. 
 
