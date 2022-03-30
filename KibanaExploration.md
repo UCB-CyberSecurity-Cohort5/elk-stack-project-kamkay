@@ -14,26 +14,26 @@
 
 1. Add the sample web log data to Kibana.
   - Navigate to Kibana home page
-    ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/1.KibanaHome.png)
+    ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/01.KibanaHome.png)
   - Add sample web logs data, click view data to reach dashboard
-    ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/2.LoadDataSet.png)
+    ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/02.LoadDataSet.png)
   - Dashboard 
-    ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/3.LogWebData.png)
+    ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/03.LogWebData.png)
 
 2. Answer the following questions:
 
     - In the last 7 days, how many unique visitors were located in India?
        - 249 
-         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/4.UniqueVisitors.png)
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/04.UniqueVisitors.png)
     - In the last 24 hours, of the visitors from China, how many were using Mac OSX?
        - 8
-         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/5.%20ChinaMacOSX.png)
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/05.%20ChinaMacOSX.png)
     - In the last 2 days, what percentage of visitors received 404 errors? How about 503 errors?
        - 503 = 1.02% & 404 = 6.122%
-         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/6.503%26404.png)
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/06.503%26404.png)
     - In the last 7 days, what country produced the majority of the traffic on the website?
        - China = 61
-         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/7.uniquebycountry.png)
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/07.uniquebycountry.png)
     - Of the traffic that's coming from that country, what time of day had the highest amount of activity?
        - Hour 13
          ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/8.hour13.png)
