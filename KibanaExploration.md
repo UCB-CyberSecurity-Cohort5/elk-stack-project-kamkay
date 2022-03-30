@@ -6,14 +6,13 @@
 
 * Your task: Explore the web server logs to see if there's anything unusual. Specifically, you will:
 
-:warning: **Heads Up**: These sample logs are specific to the time you view them. As such, your answers will be different from the answers provided in the solution file. 
-
 ---
 
 ### Instructions
 
 1. Add the sample web log data to Kibana.
   - Navigate to Kibana home page
+    *click 'load a data set and a Kibana dashboard'*
     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/01.KibanaHome.png)
   - Add sample web logs data, click view data to reach dashboard
     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/02.LoadDataSet.png)
