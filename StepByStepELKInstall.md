@@ -158,17 +158,17 @@ END OF DAY 1
   - Navigate to `http://[ELKserverPublicIP]:5601/app/kibana`
     - click 'Explore on my own' if prompted
   - From homepage click *add log data*
-     ![alt text](
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Day2scs/click%20add%20data.png)
   - click system logs
-     ![alt text](
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Day2scs/click%20system%20logs.png)
   - navigate to deb and follow instructions
-     ![alt text](deb and follow
-     ![alt text](step1install
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Day2scs/deb%20and%20follow.png)
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Day2scs/step1install.png)
   - edit the configuration file `/etc/filebeat/filebeat-config.yml` and cp it to the ansible file `/etc/ansible/`
     - `nano /etc/filebeat/filebeat-config.yml`
     - add the following to the file under the 'Kibana' and 'ElasticSearch output'
-     ![alt text](
-     ![alt text](
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Day2scs/filebeatconfig1.png)
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Day2scs/filebeatconfig2.png)
     - `cp /etc/filebeat/filbeat-config.yml /etc/ansible`
  
 2. Create the Filebeat Installation playbook + installation and verification
@@ -183,17 +183,17 @@ END OF DAY 1
     - run the `filebeat setup` command
     - run the `service filebeat start` command
     - enable the filebeat service at boot up 
-     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/filebeat-playbook.yml)
+     [filebeat-playbook.yml](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/filebeat-playbook.yml)
   - run via `ansible-playbook filebeat-playbook.yml`
     - successful run of the playbook will look similar to the output we saw for the elk install playbook run 
   - navigate to the Filebeat installation page and verify data is reaching the ELK stack 
   - click *Check Data* if done correctly, the output should look like the following
-     ![alt text](
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Day2scs/filebeatsuccess.png)
 
 3. Create the Metricbeat Installation playbook + installation and verification
   - navigate to docker metrics, from home, add data, and choose docker metrics
     - same path as previous step so refer to that if confused 
-     ![alt text](
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Day2scs/docker%20metric%20homepage.png)
   - run step one on your elk server 
   - create metric beat playbook
     - ensure you are in the anible file, same path as the previous step
@@ -206,17 +206,24 @@ END OF DAY 1
         - run the `metricbeat setup` command
         - run the `metricbeat -e` command
         - enable the metricbeat service on boot
-     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/metricbeat-playbook.yml)
+     [Metricbeat-playbook.yml](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/metricbeat-playbook.yml)
   - run the play book `ansible-playbook metricbeat-playbook.yml`
   - verify the connection on the Kibana gui (webpage)
-     ![alt text](
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Day2scs/metricsuccess.png)
+
 END OF DAY 2
 ---
 
+## Day 3
 
+Day 3 consisted of completing the Kibana Exploration file, linked below. 
+     ![KibanaExplorationFile](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/KibanaExploration.md
 
+Additionally, the network diagram present within the Readme.md file was created. Also provided below. 
+     ![Readme.md](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/README.md)
 
+Lastly, we worked on sample interview questions. Mine is provided below 
+     ![SampleInterviewQuestion.md](
 
-
-
-
+END OF DAY 3
+---
