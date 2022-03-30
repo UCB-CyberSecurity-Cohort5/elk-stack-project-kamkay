@@ -48,37 +48,51 @@
 3. Now that you have a feel for the data, Let's dive a bit deeper. Look at the chart that shows Unique Visitors Vs. Average Bytes.
      - Locate the time frame in the last 7 days with the most amount of bytes (activity).
          - The located time frame that shows to have used the most amount of bytes is 15:00 to 18:00 
-           ![alt text](
+           ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/10.activityw:mostbytes.png)
      - In your own words, is there anything that seems potentially strange about this activity?
          - From the screenshot above, we can gather that one unique user was able to generate enough activity that approximately 8,780 bytes of memory were used. For one user to generate that much activity is definitely suspicious if it was not a scheduled maintenance update or site update.  
 
 4. Filter the data by this event.
      - What is the timestamp for this event?
        - 17:15 
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/11.timestamp.png)
      - What kind of file was downloaded?
        - The file type is unidentifiable
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/12.filetype.png)
      - From what country did this activity originate?
        - China
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/13.countryorigin.png)
      - What HTTP response codes were encountered by this visitor?
        - 404
-         ![alt text](
+         ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/Kibana/14.HTTPresponsecode.png)
 
 5. Switch to the Kibana Discover page to see more details about this activity.
      - What is the source IP address of this activity?
+       - 
+         - 
      - What are the geo coordinates of this activity?
+       - 
+         - 
      - What OS was the source machine running?
+       - 
+         - 
      - What is the full URL that was accessed?
+       - https://elastic-elastic-elastic.org/people/type:astronauts/name:william-s-mcarthur/profile
+         - 
      - From what website did the visitor's traffic originate?
+       - http://www.elastic-elastic-elastic.com/success/daniel-brandenstein
+         - 
 
 6. Finish your investigation with a short overview of your insights. 
 
      - What do you think the user was doing?
+       - I believe that the user was trying to access the profile of someone who works for the company. From my understanding it seems as though this was an attempt to penetrate the website with malicious intent. 
      - Was the file they downloaded malicious? If not, what is the file used for?
+       - There wasn't a file that was downloaded, However, there was a file that was uploaded to the site. It remains unidentifiable, however can be seen as a doc file when in the in the discover page of Kibana
      - Is there anything that seems suspicious about this activity?
-     - Is any of the traffic you inspected potentially outside of compliance guidlines?
+       - It is very suspicious that the file that was interacted with cannot be identified. I assume it contained some sort of malware, or trojan software meant to infiltrate the company site. That along with the fact that the interaction used so much memory for a single user, makes it even more suspicious. 
+     - Is any of the traffic you inspected potentially outside of compliance guidelines?
+       - Yes. This could potentially be someone trying to reach a certain employee's home page in order to inject a document with malicious script. Unfortunately, unless this was an employee who was in china trying to access their own page, it seems this like a penetration attempt. 
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
