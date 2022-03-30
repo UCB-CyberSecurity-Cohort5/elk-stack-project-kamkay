@@ -2,6 +2,7 @@
 
 This was a three day project, This document is set up as so.
 
+---
 ## Day 1 - ELK Installation
 
 1. Create a new virtual network specifically for the ELK server
@@ -116,17 +117,17 @@ This was a three day project, This document is set up as so.
 5. Launching and Exposing the Container
   - run playbook with `ansible-playbook install-elk.yml`
     - *ran twice due to error in playbook*
-     ![alt text](
-     ![alt text](
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/screenshots/unsuccessful%20run%201%20of%20playbook.png)
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/screenshots/successful%20run%202%20of%20playbook%20.png)
   - ssh into the ELKserver to make sure `sebp/elk:761` is properly installed
     - *screenshot was taken after completion of project, so `sudo docker container list` was used to show the container present on the ELKserver*
-     ![alt text](
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/screenshots/dockerListOutput.png)
 
 6. Identity and Access Management
   - specify and add your public IP address to be able to access the ELKserver via the webpage
     - add your public IP to the ELKserver-nsg *ELK server Network Security Group*
     - navigate to network security groups page and locate the ELKserver-nsg
-     ![alt text]( elkservernsg1
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/screenshots/elk%20server%20nsg%201.png)
     - click *add* to create new rule
       - *Source* should be 'IP Addresses'
       - *Source IP addresses* should be your public IP address 
@@ -141,10 +142,81 @@ This was a three day project, This document is set up as so.
       - *Name* it something unique
         - *ELKaccessport*
       - click *add*
-     ![alt text](elk server add rule
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/screenshots/elk%20server%20add%20rule.png)
   - once rule is added, your screen should look like this 
-     ![alt text](completed
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/screenshots/elk%20access%20rule%20added%20completed.png)
   - verify your access of the server by navigating to `http://[ELKserverPublicIP]:5601/app/kibana` 
     - homepage should look like the following 
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/images/screenshots/successful%20access%20of%20elk%20server%20via%20webpage.png)
+
+END OF DAY 1
+---
+
+## Day 2 - Filebeat and Metricbeat Installation
+
+1. Installing Filebeat on the DVWA container
+  - Navigate to `http://[ELKserverPublicIP]:5601/app/kibana`
+    - click 'Explore on my own' if prompted
+  - From homepage click *add log data*
      ![alt text](
+  - click system logs
+     ![alt text](
+  - navigate to deb and follow instructions
+     ![alt text](deb and follow
+     ![alt text](step1install
+  - edit the configuration file `/etc/filebeat/filebeat-config.yml` and cp it to the ansible file `/etc/ansible/`
+    - `nano /etc/filebeat/filebeat-config.yml`
+    - add the following to the file under the 'Kibana' and 'ElasticSearch output'
+     ![alt text](
+     ![alt text](
+    - `cp /etc/filebeat/filbeat-config.yml /etc/ansible`
+ 
+2. Create the Filebeat Installation playbook + installation and verification
+  - make sure you are in the anisble file `cd /etc/ansible/roles`
+    - *roles* is where I put my playbooks
+  - `nano filebeat-playbook.yml`
+   - *tasks* should be the following
+    - download the `.deb` file via curl
+    - install the `.deb` file using `dpkg`command
+    - copy the filebeat config file from your ansible container to your WebVM's filebeat file
+    - run the `filebeat modules enable system` command
+    - run the `filebeat setup` command
+    - run the `service filebeat start` command
+    - enable the filebeat service at boot up 
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/filebeat-playbook.yml)
+  - run via `ansible-playbook filebeat-playbook.yml`
+    - successful run of the playbook will look similar to the output we saw for the elk install playbook run 
+  - navigate to the Filebeat installation page and verify data is reaching the ELK stack 
+  - click *Check Data* if done correctly, the output should look like the following
+     ![alt text](
+
+3. Create the Metricbeat Installation playbook + installation and verification
+  - navigate to docker metrics, from home, add data, and choose docker metrics
+    - same path as previous step so refer to that if confused 
+     ![alt text](
+  - run step one on your elk server 
+  - create metric beat playbook
+    - ensure you are in the anible file, same path as the previous step
+      - `nano metricbeat-playbook.yml`
+      - *tasks* should be the following
+        - download the Metricbeat .deb file
+        - use `dpkg` to install the `.deb` file
+        - copy the metric beat config from your ansible container to your WebVM's filebeat file 
+        - run the `metricbeat modules enable docker` command
+        - run the `metricbeat setup` command
+        - run the `metricbeat -e` command
+        - enable the metricbeat service on boot
+     ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/Playbooks/metricbeat-playbook.yml)
+  - run the play book `ansible-playbook metricbeat-playbook.yml`
+  - verify the connection on the Kibana gui (webpage)
+     ![alt text](
+END OF DAY 2
+---
+
+
+
+
+
+
+
 
