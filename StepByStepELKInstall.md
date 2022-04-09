@@ -217,7 +217,7 @@ END OF DAY 2
 ## Day 3
 
 Day 3 consisted of completing the Kibana Exploration file, linked below. 
-     [KibanaExplorationFile](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/KibanaExploration.md
+     [KibanaExplorationFile](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/KibanaExploration.md)
 
 Additionally, the network diagram present within the Readme.md file was created. Also provided below. 
      ![alt text](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-kamkay/blob/main/NetworkDiagrams/NetworkDiagram.png)
